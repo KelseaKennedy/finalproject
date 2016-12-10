@@ -1,17 +1,39 @@
 // JavaScript File
-function checkPitcher() {
-    
 var pitchers = ["Madison Bumgarner", "Matt Moore", "Jeff Samardzija","Johnny Cueto"];
-pitchers = pitchers.toLowerCase();
-return pitchers.search() >= 0;
 
+function checkInput() {
     
+document.getElementById("checkPlayers").value;
+
+}
+
+
+function ListPlayers() {
+    
+var savePlayers=pitchers.toString(); 
+
+setCookie("PlayerPitch",savePlayers, 100)
+
 }
 
 
 
-var catchers = ["Buster Posey", "Trevor Brown"];
-var secondBase = ["Joe Panik", "Kelby Tomlinson"];
-var leftField = ["Gregor Blanco", "Angel Pagan"];
-var centerField = ["Gorkys Hernandez", "Denard Span"];
 
+
+
+
+/**
+var catchers = ["Buster Posey", "Trevor Brown"];
+catchers = catchers.toLowerCase();
+
+var secondBase = ["Joe Panik", "Kelby Tomlinson"];
+secondBase = secondBase.toLowerCase();
+
+var leftField = ["Gregor Blanco", "Angel Pagan"];
+leftField = leftField.toLowerCase();
+
+
+var centerField = ["Gorkys Hernandez", "Denard Span"];
+centerField = centerField.toLowerCase();
+
+**/
