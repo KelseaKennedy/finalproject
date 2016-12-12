@@ -4,7 +4,7 @@ var catchers = ["Buster Posey", "Trevor Brown"];
 var firstBase = ["Brandon Belt"];
 var secondBase = ["Joe Panik", "Kelby Tomlinson"];
 var shortStop = ["Brandon Crawford"];
-var thirdBase = ["Connor Gillapsie"];
+var thirdBase = ["Connor Gillaspie"];
 var leftField = ["Gregor Blanco", "Angel Pagan"];
 var centerField = ["Gorkys Hernandez", "Denard Span"];
 var rightField = ["Hunter Pence"];
@@ -21,30 +21,31 @@ function checkInput()
     guess= guess.toLowerCase();
     for(var i =0; i < pitchers.length; i++) 
     {
-        if (guess == pitchers[i])
+        if (guess == pitchers[i].toLowerCase())
         {
             correctGuesses += 1;
         }
     }
+  
     //catcher 
     guess = document.getElementById("catcher").value;
     guesses.push(guess);
     guess= guess.toLowerCase();
     for(i =0; i < catchers.length; i++) 
     {
-        if (guess == catchers[i])
+        if (guess == catchers[i].toLowerCase())
         {
             correctGuesses += 1;
         }
     }
         
         // first base
-         guess = document.getElementById("firstBase").value;
+    guess = document.getElementById("firstBase").value;
     guesses.push(guess);
     guess= guess.toLowerCase();
     for(i =0; i < firstBase.length; i++) 
     {
-        if (guess == firstBase[i]) 
+        if (guess == firstBase[i].toLowerCase())
         {
             correctGuesses += 1;
         }
@@ -56,7 +57,7 @@ function checkInput()
     guess= guess.toLowerCase();
     for(i =0; i < secondBase.length; i++) 
     {
-        if (guess == secondBase[i]) 
+        if (guess == secondBase[i].toLowerCase())
         {
             correctGuesses += 1;
         }
@@ -68,7 +69,7 @@ function checkInput()
     guess= guess.toLowerCase();
     for(i =0; i < shortStop.length; i++) 
     {
-        if (guess == shortStop[i])
+        if (guess == shortStop[i].toLowerCase())
         {
             correctGuesses += 1;
         }
@@ -80,7 +81,7 @@ function checkInput()
     guess= guess.toLowerCase();
     for(i =0; i < thirdBase.length; i++)
     {
-        if (guess == thirdBase[i]) 
+        if (guess == thirdBase[i].toLowerCase())
         {
             correctGuesses += 1;
         }
@@ -92,7 +93,7 @@ function checkInput()
     guess= guess.toLowerCase();
     for(i =0; i < leftField.length; i++) 
     {
-        if (guess == leftField[i]) 
+        if (guess == leftField[i].toLowerCase())
         {
             correctGuesses += 1;
         }
@@ -103,7 +104,7 @@ function checkInput()
     guess= guess.toLowerCase();
     for(i =0; i < centerField.length; i++) 
     {
-        if (guess == centerField[i]) 
+        if (guess == centerField[i].toLowerCase()) 
         {
             correctGuesses += 1;
         }
@@ -115,16 +116,15 @@ function checkInput()
     guess= guess.toLowerCase();
     for(i =0; i < rightField.length; i++)
     {
-        if (guess == rightField[i]) 
+        if (guess == rightField[i].toLowerCase()) 
         {
             correctGuesses += 1;
         }
         
     }
     
-    function calculatePerc(numcorrect) 
-{
-    return (numcorrect/9).toPrecision(4);
+function calculatePerc(numcorrect) {
+    return (numcorrect/9)*100;
 }
     
     setCookie("percentage", calculatePerc(correctGuesses), 10);
@@ -141,8 +141,7 @@ function checkInput()
 } 
 
 function loadResults() {
-    
-    document.getElementById("percentage").innerHTML = Number(getCookie("percentage") ).toPrecision(4) +"%";
+    document.getElementById("percentage").innerHTML = Number(getCookie("percentage")).toPrecision(4) +"%";
     document.getElementById("pitcher").innerHTML = "Pitcher guess: " + getCookie("pitcher");
     document.getElementById("catcher").innerHTML = "Catcher guess: " + getCookie("catcher");
     document.getElementById("firstBase").innerHTML = "First Base guess: " + getCookie("first");
@@ -153,6 +152,10 @@ function loadResults() {
     document.getElementById("centerField").innerHTML = "Center Field guess: " + getCookie("center");
     document.getElementById("rightField").innerHTML = "Right Field guess: " + getCookie("right");
 }
+
+
+
+// COOKIES
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -176,3 +179,5 @@ function getCookie(cname) {
     return "";
 }
 
+
+/** Kelsea Kennedy **/

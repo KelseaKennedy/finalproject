@@ -2,7 +2,13 @@ body {
     background-color: orange;
 }
 .field{background-image: url("http://www.clipartkid.com/images/100/baseball-diamond-images-baseball-diamond-and-bats-on-eLUfR1-clipart.");
-background-repeat: no-repeat;
-background-size: 800px 750px; 
+background-repeat: no-repeat; 
 
+
+background-size: 800px 750px; 
 }
+h1 { font-family: "comic sans ms",cursive,sans-serif;}
+p { font-family: "comic sans ms",cursive,sans-serif;}
+
+
+/** Kelsea Kennedy **/
